@@ -4,7 +4,7 @@ let name = prompt ("Please enter your first name for your color personality.");
 console.log (name);
 
 // Piece of crap wont cancel here if I close prompt!!!!!!!!
-
+//RYEKER NOTES: the reason for this is you are not checking the value of your `let name` before you move on. You should put a control flow check here for what the user returns before you move on.
 
 let color = prompt("Please choose your favotite color.\n\nRed, Orange, Yellow, Green, Blue, Pink, Purple, Black, White, and Grey");
 console.log (color);
