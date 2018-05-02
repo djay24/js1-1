@@ -16,10 +16,10 @@ function calc(){
 
   if (dropdown === "fahrenheit"){
     // console.log (fahrenheit);
-    document.getElementById("answer").innerHTML = `The temperature in Fahrenheit is ${fahrenheit} Degrees`;
+    document.getElementById("answer").innerHTML = `The temperature in fahrenheit is ${fahrenheit} degrees`;
 } else if(dropdown === "celcius"){
       // console.log (celcius);
-      document.getElementById("answer").innerHTML = `The temperature in Celcius is ${celcius} Degrees`;
+      document.getElementById("answer").innerHTML = `The temperature in celcius is ${celcius} degrees`;
     }
 }
 calc ();
