@@ -6,20 +6,22 @@
 // 4  Display the converted temperature in the h3.
 
 
-function calc(){
+function calc() {
   let dropdown = document.getElementById("dropdown").value.toLowerCase();
-  let temp = parseInt(document.getElementById("temp").value);
-  let fahrenheit = parseInt((temp * 9/5) + 32);
-  let celcius = parseInt((temp - 32) * 5/9);
+  let temp = parseInt(document.getElementById("temp").value) || 0;
+  let fahrenheit = parseInt((temp * 9 / 5) + 32);
+  let celcius = parseInt((temp - 32) * 5 / 9);
   // console.log(dropdown);
 
-
-  if (dropdown === "fahrenheit"){
+   if (dropdown === "fahrenheit") {
     // console.log (fahrenheit);
-    document.getElementById("answer").innerHTML = `The temperature in fahrenheit is ${fahrenheit} degrees`;
-} else if(dropdown === "celcius"){
-      // console.log (celcius);
-      document.getElementById("answer").innerHTML = `The temperature in celcius is ${celcius} degrees`;
-    }
+    document.getElementById("answer").innerHTML = `The temperature in fahrenheit is ${fahrenheit} degrees.`;
+  } else if (dropdown === "celcius") {
+    // console.log (celcius);
+    document.getElementById("answer").innerHTML = `The temperature in celcius is ${celcius} degrees.`;
+  }
+  //   else if (!isNaN(temp)) {
+  //   document.getElementById("answer").innerHTML = " ";
+  // }
 }
-calc ();
+calc();
