@@ -1,0 +1,30 @@
+.box {
+  background-color: blue;
+  text-align: center;
+  height: 500px;
+}
+
+.dropdown-box {
+  color: #fff;
+  font-size: 20px;
+}
+
+
+.title {
+  font-weight: bold;
+  color: #fff;
+}
+
+.temp-label {
+  color: #fff;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.panal-dec {
+  margin-top: 50px;
+  padding: 5px;
+}
+ .form-control {
+   text-align: center;
+ }

@@ -1,13 +1,25 @@
 /*jshint esversion: 6 */
 
-let firstName = prompt("Answer Question 1 of 3\n\n\nWhats your First Name");
+// 1  Employ a function that accepts two arguments: temperature and scale (either celcius or fahrenheit).
+// 2  Display the temperature in an h3 with minimal styling.
+// 3  When the user clicks on the h3, run the function to convert the temperature.
+// 4  Display the converted temperature in the h3.
 
-let lastName = prompt("Answer Question 2 of 3\n\n\nWhats your Last Name");
 
-console.log (firstName);
-alert(lastName);
+function calc(){
+  let dropdown = document.getElementById("dropdown").value.toLowerCase();
+  let temp = parseInt(document.getElementById("temp").value);
+  let fahrenheit = parseInt((temp * 9/5) + 32);
+  let celcius = parseInt((temp - 32) * 5/9);
+  // console.log(dropdown);
 
-let birthDay = prompt("Answer Question 3 of 3\n\n\nWhen were you Born\nPlease use mm/dd/yyyy");
 
-console.log (birthDay);
-alert (birthDay = new Date(birthDay));
+  if (dropdown === "fahrenheit"){
+    // console.log (fahrenheit);
+    document.getElementById("answer").innerHTML = `The temperature in Fahrenheit is ${fahrenheit} Degrees`;
+} else if(dropdown === "celcius"){
+      // console.log (celcius);
+      document.getElementById("answer").innerHTML = `The temperature in Celcius is ${celcius} Degrees`;
+    }
+}
+calc ();
