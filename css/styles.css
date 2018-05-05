@@ -11,9 +11,9 @@ body{
     overflow: hidden;
 }
 .body-container h1 {
-  margin-top: 0px;
+    margin-top: 0px;
     padding-top: 0px;
-    padding-bottom: 950px;
+    padding-bottom: 0px;
     position: relative;
     z-index: 1;
     text-align: center;
