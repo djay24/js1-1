@@ -97,3 +97,24 @@ list-style: none;
 text-align: center;
 justify-content: center;
 }
+
+@media (max-width: 768px) {
+  #form-col{
+    -webkit-order: 1;
+    -ms-order: 1;
+    order: 1;
+    margin-top: -140px;
+    margin-bottom: 50px;
+  }
+  #ul-col {
+    -webkit-order: 2;
+    -ms-order: 2;
+    order: 2;
+  }
+  #div-complete {
+    -webkit-order: 3;
+    -ms-order: 3;
+    order: 3;
+  }
+
+}

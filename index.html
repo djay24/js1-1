@@ -23,7 +23,7 @@
     <h1>Weekly Todo List</h1>
     <div class="container">
       <section class="row col-md-12 section-container">
-        <div class="col-md-8 ul-box box">
+        <div id="ul-col" class="col-md-8 ul-box box ">
           <h2 class="ul-h2 day-header">Monday</h2>
           <ul class="day-box">
             <li class="item1">item 1</li>
@@ -53,7 +53,7 @@
             <li class="item1">item 1</li>
           </ul>
         </div>
-        <form class="col-md-4 form-box">
+        <form id="form-col" class="col-md-4 form-box">
           <h2 class="form-header">Enter New Todo</h2>
           <div class="form-group">
             <label for="selday">Select Day (select one):</label>
@@ -128,13 +128,14 @@
             </div>
           </div>
         </form>
-<div class="row col-md-12 comp-header">
+<div id="div-complete" class="row col-md-12 comp-header">
   <h2 class="comp-header">Completed Todo List</h2>
-</div>
-<div class="col-md-12 comp-li row">
-  <ul class="comp-ul">
-    <li id="done" class="comp-ul" >Job Done</li>
+
+<div id="complete" class="col-md-12 comp-li row">
+  <ul id="ul-complete">
+    <li id="li-complete" class="comp-ul" >Job Done</li>
   </ul>
+</div>
 </div>
       </section>
     </div>
