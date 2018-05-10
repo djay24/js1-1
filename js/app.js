@@ -2,23 +2,23 @@
 
 
 
-document.getElementById('submit').addEventListener('click', function ()  {
+document.getElementById('submit').addEventListener('click', function (e)  {
+  e.preventDefault();
   let day = document.getElementById('day').value;
   let time = document.getElementById('time').value;
   let todo = document.getElementById('comment').value;
-  todoItem = [day, time, todo];
-  str = todoItem.toString();
-  if (str) addItemTodo(str);
+  let todoItem = `${time} ${todo}`
+  console.log(todoItem);
+  // todoItem = [time, todo];
+  // str = todoItem.toString();
+  if (todoItem) addItemTodo(todoItem);
+  document.getElementById('comment').value = "";
 
-  // console.log(todoItem);
-  // console.log(str);
-  // console.log(todo);
   });
 
 function addItemTodo (listItem) {
-  let list = document.getElementById('Monday');
-  let str = document.createElement('li');
-  list.innerText = listItem;
-  console.log(listItem);
-  list.appendChild(str);
+  let listTime = document.getElementById('Monday');
+  let listComment = document.createElement('li');
+  listComment.innerText = listItem;
+  listTime.appendChild(listComment)
 }
