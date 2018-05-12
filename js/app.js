@@ -1,8 +1,8 @@
 /*jshint esversion: 6 */
 
 
-
-document.getElementById('submit').addEventListener('click', function (e)  {
+// Create Submit Button and function
+document.getElementById('submit').addEventListener('click', function(e) {
   e.preventDefault();
   let day = document.getElementById('day').value;
   let time = document.getElementById('time').value;
@@ -12,21 +12,23 @@ document.getElementById('submit').addEventListener('click', function (e)  {
 
   if (todoItem) addItemTodo(todoItem);
   document.getElementById('comment').value = "";
+});
 
-  });
 
-function addItemTodo (listItem) {
-  //Get ul  and create li
+//Get ul  and create li
+function addItemTodo(listItem) {
   let listTime = document.getElementById('Monday');
   let listComment = document.createElement('li');
   listComment.innerText = listItem;
+  listComment.classList.add('li-time');
+
 
   //Add Font Awesome li Buttons
   deleteIcon = '<i class="fas fa-trash-alt"></i>';
   completeIcon = '<i class="fas fa-check-circle"></i>';
 
-  let buttonBox = document.createElement('div');
-  buttonBox.classList.add("buttonBox");
+  let listBox = document.createElement('div');
+  listBox.classList.add("listBox");
 
   let remove = document.createElement("button");
   remove.classList.add('remove');
@@ -36,8 +38,38 @@ function addItemTodo (listItem) {
   complete.classList.add('complete');
   complete.innerHTML = completeIcon;
 
-  buttonBox.appendChild(complete);
-  buttonBox.appendChild(remove);
-  listComment.appendChild(buttonBox);
+  listBox.appendChild(complete);
+  listBox.appendChild(remove);
+  listComment.appendChild(listBox);
   listTime.appendChild(listComment);
+
+
+  // Delete Button Function
+  remove.addEventListener('click', deleteTodo);
+
+  function deleteTodo() {
+    let todoItem = listTime;
+    listTime.removeChild(listComment);
+    // console.log(todoItem.value);
+  }
+
+
+  // Complete Button Function
+  complete.addEventListener('click', completeTodo);
+  // document.getElementById('listItem');
+  function completeTodo() {
+    let moveComplete = listBox.parentNode;
+    ulComplete.appendChild(moveComplete);
+    moveComplete.classList.add(complete-li-box);
+  }
+
+
 }
+
+
+// Delete Todo item
+// function deleteTodo() {
+//   let listItem = this.parentNode.parentNode;
+//   let parent = listItem.parentNode;
+//   parent.removeChild(listItem);
+// }
