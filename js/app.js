@@ -36,14 +36,14 @@ function addItemTodo(listItem) {
   remove.innerHTML = deleteIcon;
 
 
-  let completeBox = document.createElement('div');
-  listBox.classList.add("listBox");
+  // let completeBox = document.createElement('div');
+  // listBox.classList.add("listBox");
 
   let complete = document.createElement("button");
   complete.classList.add('complete');
   complete.innerHTML = completeIcon;
 
-  completeBox.appendChild(complete);
+  listBox.appendChild(complete);
   listBox.appendChild(remove);
   listComment.appendChild(listBox);
   listTime.appendChild(listComment);
