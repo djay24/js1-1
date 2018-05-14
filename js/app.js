@@ -6,10 +6,10 @@
 // Create Submit Button and function
 document.getElementById('submit').addEventListener('click', function(e) {
   e.preventDefault();
-  day = document.getElementById('day').value;
-   time = document.getElementById('time').value;
- todo = document.getElementById('comment').value;
-   todoItem = `${time} \u2002 ${todo}`;
+  let day = document.getElementById('day').value;
+  let time = document.getElementById('time').value;
+  let todo = document.getElementById('comment').value;
+  let todoItem = `${time} \u2002 ${todo}`;
   if (todoItem) ;
   document.getElementById('comment').value = "";
   console.log (day);
