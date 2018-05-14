@@ -23,7 +23,7 @@ body {}
   font-size: 5em;
   font-family: 'Gloria Hallelujah', cursive;
   font-weight: 900;
-  background-color: rgba(44, 121, 244, .6);
+  background-color: rgba(44, 121, 244, 1);
 }
 
 .form-control {
@@ -33,10 +33,10 @@ body {}
 .body-container img {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 120px;
   width: 100%;
   height: auto;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .section-container {
