@@ -1,5 +1,8 @@
 /*jshint esversion: 6 */
 
+//Add Font Awesome li Buttons
+deleteIcon = '<i class="fas fa-trash-alt"></i>';
+completeIcon = '<i class="fas fa-check-circle"></i>';
 
 // Create Submit Button and function
 document.getElementById('submit').addEventListener('click', function(e) {
@@ -24,9 +27,7 @@ function addItemTodo(listItem) {
   listComment.classList.add('li-completed');
 
 
-  //Add Font Awesome li Buttons
-  deleteIcon = '<i class="fas fa-trash-alt"></i>';
-  completeIcon = '<i class="fas fa-check-circle"></i>';
+
 
   let listBox = document.createElement('div');
   listBox.classList.add("listBox");
@@ -34,10 +35,6 @@ function addItemTodo(listItem) {
   let remove = document.createElement("button");
   remove.classList.add('remove');
   remove.innerHTML = deleteIcon;
-
-
-  // let completeBox = document.createElement('div');
-  // listBox.classList.add("listBox");
 
   let complete = document.createElement("button");
   complete.classList.add('complete');
@@ -48,14 +45,12 @@ function addItemTodo(listItem) {
   listComment.appendChild(listBox);
   listTime.appendChild(listComment);
 
-
   // Delete Button Function
   remove.addEventListener('click', deleteTodo);
 
   function deleteTodo() {
     let todoItem = listTime;
     listTime.removeChild(listComment);
-    // console.log(todoItem.value);
   }
 
 
@@ -67,16 +62,23 @@ function addItemTodo(listItem) {
     let ulComplete = document.getElementById('ulComplete');
     ulComplete.appendChild(moveComplete);
     moveComplete.removeChild(removeIcon);
-    // listBox.classList.add("listBox");
-    // remove.classList.add('remove');
-    // remove.innerHTML = deleteIcon;
-    // listBox.appendChild(remove);
-    console.log(removeIcon);
-    }
 
-    // function removeElement(){
-    //   removeIcon.parentNode.removeChild(complete);
-    //
-    // }
+
+    let remove = document.createElement("button");
+    remove.classList.add('remove-completed');
+    remove.innerHTML = deleteIcon;
+    moveComplete.appendChild(remove);
+    console.log(moveComplete)
+    console.log(ulComplete)
+
+
+      // Delete Button Function
+      remove.addEventListener('click', deleteTodo);
+
+      function deleteTodo() {
+        let finalRemove = moveComplete;
+        ulComplete.removeChild(moveComplete);
+      }
+}
 
 }
