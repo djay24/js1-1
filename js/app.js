@@ -62,6 +62,7 @@ function addItemTodo(listItem) {
     let moveComplete = listBox.parentNode; //leave alone
     let removeIcon = listBox;
     let ulComplete = document.getElementById('ulComplete');
+    console.log(day.value);
     ulComplete.appendChild(moveComplete);
     moveComplete.removeChild(removeIcon);
     let remove = document.createElement("button");

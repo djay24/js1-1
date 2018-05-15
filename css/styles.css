@@ -55,14 +55,6 @@ body {}
   right: 0:
 }
 
-/* Button right border
-/* .day-box .li-time {
-  padding-bottom: 14px;
-  border-right: 1px solid #000;
-} */
-
-/*    li css  */
-
 .li-time {
   border-bottom: 1px solid #000;
   width: 92%;
@@ -181,11 +173,11 @@ body {}
   font-weight: 900;
   text-align: center;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 12px;
 }
 
 .comp-li {
-  padding: 20px;
+  padding: 5px;
   border: 2px solid #000;
   list-style: none;
   margin-bottom: 60px;
